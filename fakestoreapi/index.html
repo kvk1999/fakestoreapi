@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-orange-500">
+    <div class="container mx-auto p-6">
+        <!-- Header Section -->
+        <header class="flex flex-col justify-center items-center mb-6">
+            <h1 class="text-3xl font-bold text-green-500 mb-4">Product Store</h1>
+            <input type="text" id="search" placeholder="Search products..." class="p-2 rounded-md w-full md:w-1/2">
+        </header>
+        
+        
+        <!-- Product Grid -->
+        <main id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Products will be rendered here -->
+        </main>
+    </div>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50">
+        <div class="modal-content bg-white rounded-lg mx-auto my-20 p-6 w-11/12 md:w-1/3">
+            <span class="close-button text-gray-600 float-right cursor-pointer text-2xl">&times;</span>
+            <h2 id="modal-title" class="text-xl font-semibold"></h2>
+            <img id="modal-image" alt="Product Image" class="my-4">
+            <p id="modal-description" class="mb-4"></p>
+            <label for="quantity" class="block mb-2">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1" class="mb-4 border rounded p-2">
+            <p id="modal-price" class="font-bold"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
